@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Global stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/global_assets/css/icons/icomoon/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script src="/global_assets/js/main/jquery.min.js"></script>
+    <script src="/global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script src="/global_assets/js/plugins/ui/prism.min.js"></script>
+
+    <!-- /theme JS files -->
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="/global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+    <script src="/global_assets/js/demo_pages/form_select2.js"></script>
+    <script src="/global_assets/js/demo_pages/mail_list_write.js"></script>
+    <script src="/global_assets/js/plugins/editors/summernote/summernote.min.js"></script>
+
+    <!-- Theme JS files -->
+    <script src="/global_assets/js/plugins/forms/validation/validate.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/inputs/touchspin.min.js"></script>
+    <script src="/global_assets/js/plugins/uploaders/bs_custom_file_input.min.js"></script>
+    <script src="/global_assets/js/demo_pages/components_modals.js"></script>
+
+    <script src="/assets/js/app.js"></script>
+    <script src="/global_assets/js/demo_pages/form_validation.js"></script>
+
+    <!-- /theme JS files -->
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.3.min.js"
+      integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-y: auto;
+      }
+
+      .bg-primary,
+      .bg-secondary {
+        background-color: #2a4d85 !important;
+      }
+
+      /* CSS */
+
+			.section-accordion .card a {
+        color: #eee !important;
+      }
+
+      @media (min-width: 1200px) {
+          .section-accordion .card .card-title {
+            width: 100%;
+          }
+        }
+
+        
+
+
+       
+          
+
+      /* .section-accordion .card .sub-link {
+        color: #000 !important;
+      } */
+
+
+      .section-accordion .card .card-body {
+          padding: 0;
+        }
+
+        .section-accordion .card .body-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+        .section-accordion .card .body-elements .img {
+          flex: 0.4;
+          padding: .5rem;  /* 24px */
+        }
+
+        .section-accordion .card .body-elements .img img {
+         width: 310px;
+         height: 380px;
+         object-fit: cover;
+        }
+
+        .section-accordion .card .body-elements .table-responsive {
+          flex: 1;
+          padding: .5rem;
+        }
+
+        .section-accordion .card .body-elements .person-info h1 {
+          font-size: 1.8rem;
+          margin: 0;
+          padding: 0.5rem;
+        }
+
+        .section-accordion .card .body-elements .person-info p {
+          font-size: 1.2rem;
+          padding: 0.5rem;
+          margin: 0;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person .table {
+          margin-bottom: 0.5rem;
+        }
+
+       
+
+        .section-accordion .card .body-elements .table-responsive .person button {
+          padding: 0.8rem 1rem;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person button span {
+          font-size: 13px;
+        }
+      
+
+
+      @media (max-width: 1200px) {
+        .section-accordion .card .card-body {
+          padding: 0;
+        }
+
+        .section-accordion .card .body-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+        .section-accordion .card .body-elements .img {
+          flex: 0.2;
+          padding: 1.5rem;  /* 24px */
+        }
+
+        .section-accordion .card .body-elements .img img {
+         width: 230px;
+         height: 340px;
+         object-fit: cover;
+        }
+
+        .section-accordion .card .body-elements .table-responsive {
+          flex: 1;
+          padding: .5rem;
+        }
+
+        .section-accordion .card .body-elements .person-info h1 {
+          font-size: 1.5rem;
+          margin: 0;
+          /* padding: 0.5rem; */
+        }
+
+        .section-accordion .card .body-elements .person-info p {
+          font-size: 1rem;
+          /* padding: 0.5rem; */
+          margin: 0;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person .table {
+          margin-bottom: 0.5rem;
+        }
+
+      
+        
+
+        .section-accordion .card .body-elements .table-responsive .person button {
+          padding: 0.6rem 0.8rem;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person button span {
+          font-size: 12px;
+        }
+      }
+     
+
+      
+      @media (max-width: 769px) {
+        .section-accordion .card .card-body {
+          padding: 0;
+        }
+
+        .section-accordion .card .body-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+        .section-accordion .card .body-elements .img {
+         
+          padding: 1.5rem;  /* 24px */
+        }
+
+        .section-accordion .card .body-elements .img img {
+         width: 220px;
+         height: 330px;
+         object-fit: cover;
+        }
+
+        .section-accordion .card .body-elements .table-responsive {
+          
+          padding: .5rem;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .table {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person-info {
+          text-align: center;
+         
+        }
+
+        .section-accordion .card .body-elements .person-info h1 {
+          font-size: 1.5rem;
+          margin: 0;
+          /* padding: 0.5rem; */
+        }
+
+        .section-accordion .card .body-elements .person-info p {
+          font-size: 1rem;
+          /* padding: 0.5rem; */
+          margin: 0;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person .table {
+          margin-bottom: 0.5rem;
+        }
+
+      
+
+        .section-accordion .card .body-elements .table-responsive .person button {
+          padding: 0.6rem 0.8rem;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person button span {
+          font-size: 12px;
+        }
+      }
+     
+     
+      
+    
+
+      
+      @media (max-width: 447px) {
+        body {
+    padding: 0px 6px !important;
+}
+
+
+        .section-accordion .card .card-body {
+          padding: 0 !important;
+        }
+
+        .section-accordion .card .body-elements {
+          display: flex ;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 2px;
+        }
+
+        .section-accordion .card .body-elements .img {
+        padding: 18px ;
+        }
+
+        .section-accordion .card .body-elements .img img {
+         width: 240px ;
+         height: 280px;
+         object-fit: cover;
+        }
+
+        /* .section-accordion .card .body-elements .img img {
+          width: 100% !important;
+          
+        } */
+
+        .section-accordion .card .body-elements .person-info {
+          margin: 4px 0;
+        }
+
+        .section-accordion .card .body-elements .person-info h1 {
+          font-size: 22px;
+          margin-bottom: 20px;
+          
+        }
+
+        .section-accordion .card .body-elements .person-info p {
+          font-size: 16px ;
+          padding: 6px;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person .table {
+          display: flex;
+         align-items: center;
+         justify-content: center;
+          flex-direction: column;
+          margin-left: 0;
+          
+        }
+
+        .section-accordion .card .body-elements .table-responsive {
+          padding: 0;
+        }
+
+     
+
+        
+
+
+        .section-accordion .card .body-elements .table-responsive .person {
+          display: flex;
+         align-items: center;
+         justify-content: center;
+          flex-direction: column;
+        }
+
+        
+
+        .section-accordion .card .body-elements .person-info  {
+          text-align: center;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person button {
+          padding: 0.4rem 0.6rem;
+        }
+
+        .section-accordion .card .body-elements .table-responsive .person button span {
+          font-size: 10px;
+        }
+      }
+      
+
+      
+      
+      
+    </style>
+  </head>
+  
+
+  <body>
+    
+		<section class="section-accordion p-3 ">
+
+
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">Frontend</h4>
+				</div>
+
+				<div class="card-body">
+					<ul class="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-secondary nav-justified">
+						<li class="nav-item"><a href="#colored-justified-tab1" class="nav-link active" data-toggle="tab">1-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab2" class="nav-link" data-toggle="tab">2-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab2" class="nav-link" data-toggle="tab">3-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab2" class="nav-link" data-toggle="tab">4-modul</a></li>
+						
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane fade active show" id="colored-justified-tab1">
+							<div class="card">
+								<div class="card-header p-2" style="background-color: #2a4d85;">
+									<h4 class="card-title">
+										<a
+											data-toggle="collapse"
+											style="font-size: 1.125rem;"
+											class="text-body collapsed text-uppercase"
+											href="#accordion-control-group1"
+											aria-expanded="false"
+											>Salom Frontend</a
+										>
+									</h4>
+								</div>
+			
+								<div
+									id="accordion-control-group1"
+									class="collapse"
+									data-parent="#accordion-control"
+								>
+									<div class="card-body mt-3">
+										<div
+											class="card-group-control card-group-control-left"
+											id="sub-accordion-control"
+										>
+											
+										<div class="card-body p-2">
+											<ol class="text-uppercase">
+												<li class="text-bold">Mentor va ushbu kursda nimalar oqitilishi haqida qisqacha malumot</li>
+												<li>HTML, CSS va JavaScript nima? Va ular o'rtasidagi farq</li>
+												<li>Frontend dasturchi kimlar bilan ishlaydi?</li>
+												<li>Nima uchun frontendni o'rganish kerak?</li>
+											</ol>
+											
+											
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+							<div class="card">
+								<div class="card-header p-2" style="background-color: #2a4d85;">
+									<h4 class="card-title">
+										<a
+											data-toggle="collapse"
+											style="font-size: 1.125rem;"
+											class="text-body collapsed text-uppercase"
+											href="#accordion-control-group2"
+											aria-expanded="false"
+											>HTML bilan tanishish</a
+										>
+									</h4>
+								</div>
+			
+								<div
+									id="accordion-control-group2"
+									class="collapse"
+									
+								>
+									<div class="card-body mt-3">
+										<div
+											class="card-group-control card-group-control-left"
+											id="sub-accordion-control"
+										>
+											
+										<div class="card-body p-2">
+											<ol class="text-uppercase">
+												<li class="text-bold">Teg nima, HTML hujjat tuzilishi va HTMLdagi asosiy teglar</li>
+												<li>Muhitni sozlash</li>
+												<li>h[1-6], p, br, hr, pre, strong, i, em, mark, del, ins, sub, sup, blockquote, q</li>
+											</ol>
+											
+											
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab2">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid laeggin.
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab3">
+							DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg whatever.
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab4">
+							Aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthet.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">Backend</h4>
+				</div>
+
+				<div class="card-body">
+					<ul class="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-secondary nav-justified">
+						<li class="nav-item"><a href="#colored-justified-tab-1" class="nav-link active" data-toggle="tab">1-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab-2" class="nav-link" data-toggle="tab">2-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab-3" class="nav-link" data-toggle="tab">3-modul</a></li>
+						<li class="nav-item"><a href="#colored-justified-tab-4" class="nav-link" data-toggle="tab">4-modul</a></li>
+						
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane fade active show" id="colored-justified-tab-1">
+							<div class="card">
+								<div class="card-header p-2" style="background-color: #2a4d85;">
+									<h4 class="card-title">
+										<a
+											data-toggle="collapse"
+											style="font-size: 1.125rem;"
+											class="text-body collapsed text-uppercase"
+											href="#accordion-control-group1"
+											aria-expanded="false"
+											>Salom Frontend</a
+										>
+									</h4>
+								</div>
+			
+								<div
+									id="accordion-control-group1"
+									class="collapse"
+									data-parent="#accordion-control"
+								>
+									<div class="card-body mt-3">
+										<div
+											class="card-group-control card-group-control-left"
+											id="sub-accordion-control"
+										>
+											
+										<div class="card-body p-2">
+											<ol class="text-uppercase">
+												<li class="text-bold">Mentor va ushbu kursda nimalar oqitilishi haqida qisqacha malumot</li>
+												<li>HTML, CSS va JavaScript nima? Va ular o'rtasidagi farq</li>
+												<li>Frontend dasturchi kimlar bilan ishlaydi?</li>
+												<li>Nima uchun frontendni o'rganish kerak?</li>
+											</ol>
+											
+											
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+							<div class="card">
+								<div class="card-header p-2" style="background-color: #2a4d85;">
+									<h4 class="card-title">
+										<a
+											data-toggle="collapse"
+											style="font-size: 1.125rem;"
+											class="text-body collapsed text-uppercase"
+											href="#accordion-control-group2"
+											aria-expanded="false"
+											>HTML bilan tanishish</a
+										>
+									</h4>
+								</div>
+			
+								<div
+									id="accordion-control-group2"
+									class="collapse"
+									
+								>
+									<div class="card-body mt-3">
+										<div
+											class="card-group-control card-group-control-left"
+											id="sub-accordion-control"
+										>
+											
+										<div class="card-body p-2">
+											<ol class="text-uppercase">
+												<li class="text-bold">Teg nima, HTML hujjat tuzilishi va HTMLdagi asosiy teglar</li>
+												<li>Muhitni sozlash</li>
+												<li>h[1-6], p, br, hr, pre, strong, i, em, mark, del, ins, sub, sup, blockquote, q</li>
+											</ol>
+											
+											
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab-2">
+							Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid laeggin.
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab-3">
+							DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg whatever.
+						</div>
+
+						<div class="tab-pane fade" id="colored-justified-tab-4">
+							Aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthet.
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		
+		</section>
+
+
+    
+  </body>
+</html>
