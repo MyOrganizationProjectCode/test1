@@ -43,7 +43,8 @@ body::-webkit-scrollbar {
     border-radius: 0 !important;
 }
 
-.view-box b, .view-box img {
+.view-box b,
+.view-box img {
     color: #fff;
     position: absolute;
     top: 50%;
@@ -99,7 +100,7 @@ body::-webkit-scrollbar {
 
 .scrollToTop:hover i {
     animation-name: arrowUp;
-    animation-timing-function: cubic-bezier(1,-0.02,.75,1.38);
+    animation-timing-function: cubic-bezier(1, -0.02, .75, 1.38);
     animation-duration: .6s;
     animation-iteration-count: infinite;
 }
@@ -108,9 +109,11 @@ body::-webkit-scrollbar {
     0% {
         top: 20%;
     }
+
     50% {
         top: 50%;
     }
+
     100% {
         top: 20%;
     }
@@ -137,4 +140,10 @@ body::-webkit-scrollbar {
 
 .dropdown-toggle::after {
     font-size: 16px;
+}
+
+
+.swiper {
+    width: 600px;
+    height: 300px;
 }
